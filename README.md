@@ -45,6 +45,10 @@ A project structure is created.
 **Note:** the project structure is already created for this sample project, so no `init` is needed, if the project is cloned.
 
 ### Building the *blink* project
+Clone the blink project:
+```
+git clone https://github.com/domschl/espblink
+```
 To compile, use:
 ```
 platformio run
@@ -59,7 +63,7 @@ To compile & flash the ESP chip, use:
 ```
 pio run -t upload
 ```
-If upload fails, the most common cause is a failed detection of the USB-serial port in use. This again is mostly caused by a failed driver installation. Verify that you can actually see a new serial port when plugging in the ESP port via USB.
+If upload fails, the most common cause is a failed detection of the USB-serial port in use. This again is mostly caused by a failed driver installation. Verify that you can actually see a new serial port when plugging in the ESP board via USB.
 
 #### Successful build & upload
 This should result in the onboard led of the ESP board blinking.
