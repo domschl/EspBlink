@@ -13,7 +13,7 @@ brew cask install wch-ch34x-usb-serial-driver
 ```
 Upon successful installation, you should see a new device similar to `/dev/cu.wchusbserial1460`.
 
-**Note:** Beginning with MacOS High Sierra 10.13, you need to reboot the Mac after installing the kernel driver. On first driver load, MacOS will block the driver. In `System Settings / Security & Privacy`, the driver can be enabled for loading.
+**Note:** Beginning with MacOS High Sierra 10.13, you need to reboot the Mac after installing the kernel driver. On first driver load, MacOS will block the driver. In `System Preferences / Security & Privacy`, the driver can be enabled for loading.
 
 **Note:** Linux already contains the required driver in the standard kernel. Simply plug in the ESP board.
 
