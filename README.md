@@ -1,3 +1,5 @@
+Minimal **howto** create an application for the ESP8266/ESP12E,ESP12F boards on Mac or Linux using PlatformIO and the Arduino kernel for ESP8266.
+
 ## Preparation
 ### MacOS only: USB-serial driver
 MacOS needs a kernel-driver for the USB-serial functionality. For ESP12e/f modules, the chipset is CH341.
@@ -9,6 +11,8 @@ Installation via [homebrew](https://brew.sh):
 brew tap mengbo/ch340g-ch34g-ch34x-mac-os-x-driver https://github.com/mengbo/ch340g-ch34g-ch34x-mac-os-x-driver
 brew cask install wch-ch34x-usb-serial-driver
 ```
+Upon successful installation, you should see a new device similar to `/dev/cu.wchusbserial1460`.
+
 **Note:** Beginning with MacOS High Sierra 10.13, you need to reboot the Mac after installing the kernel driver. On first driver load, MacOS will block the driver. In `System Settings / Security & Privacy`, the driver can be enabled for loading.
 
 **Note:** Linux already contains the required driver in the standard kernel. Simply plug in the ESP board.
@@ -55,10 +59,13 @@ To compile & flash the ESP chip, use:
 ```
 pio run -t upload
 ```
+If upload fails, the most common cause is a failed detection of the USB-serial port in use. This again is mostly caused by a failed driver installation. Verify that you can actually see a new serial port when plugging in the ESP port via USB.
+
+#### Successful build & upload
 This should result in the onboard led of the ESP board blinking.
 
 # References
-* MacOS USB-serial driver, 
-* PlatformIO, platformio-ide-terminal
-* Arduino ESP kernel, https://github.com/esp8266/Arduino
-* Arduino ESP documentation, http://esp8266.github.io/Arduino/versions/2.3.0/
+* MacOS USB-serial driver, [ch340g-ch34g-ch34x-mac-os-x-driver](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver)
+* [PlatformIO](http://platformio.org)
+* [Arduino ESP kernel](https://github.com/esp8266/Arduino)
+* [Arduino ESP documentation](http://esp8266.github.io/Arduino/versions/2.3.0/)
