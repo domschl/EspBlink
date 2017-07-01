@@ -44,7 +44,7 @@ A project structure is created.
 
 **Note:** the project structure is already created for this sample project, so no `init` is needed, if the project is cloned.
 
-### Building the *blink* projeject
+### Building the *blink* project
 To compile, use:
 ```
 platformio run
