@@ -73,7 +73,9 @@ If upload fails, the most common cause is a failed detection of the USB-serial p
 This should result in the onboard led of the ESP board blinking.
 
 # References
-* MacOS USB-serial driver, [ch340g-ch34g-ch34x-mac-os-x-driver](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver)
+* CH34x MacOS USB-serial driver, [ch340g-ch34g-ch34x-mac-os-x-driver](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver)
+* CP210x USB to UART Bridge VCP Drivers by Silicon Labs:
+https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 * [PlatformIO](http://platformio.org)
 * [Arduino ESP kernel](https://github.com/esp8266/Arduino)
 * [Arduino ESP documentation](http://esp8266.github.io/Arduino/versions/2.3.0/)
