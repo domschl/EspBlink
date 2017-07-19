@@ -2,8 +2,8 @@ Minimal **howto** create an application for the ESP8266/ESP12E,ESP12F boards on 
 
 ## Preparation
 ### MacOS only: USB-serial driver
-MacOS needs a kernel-driver for the USB-serial functionality. For ESP12e/f modules, the chipset is CH341.
-
+MacOS needs a kernel-driver for the USB-serial functionality. Different versions of the ESP models use different USB-serial chipsets. The two most common chipsets are CH34x and CP210x. In case of doubt, it is perfectly fine to install both drivers.
+#### Chipset CH341
 The github project [ch340g-ch34g-ch34x-mac-os-x-driver](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver) by Adrian Mihalko provides a MacOS driver for this chipset.
 
 Installation via [homebrew](https://brew.sh):
@@ -12,6 +12,9 @@ brew tap mengbo/ch340g-ch34g-ch34x-mac-os-x-driver https://github.com/mengbo/ch3
 brew cask install wch-ch34x-usb-serial-driver
 ```
 Upon successful installation, you should see a new device similar to `/dev/cu.wchusbserial1460`.
+#### Chipset CP210x
+CP210x USB to UART Bridge VCP Drivers by Silicon Labs:
+https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 
 **Note:** Beginning with MacOS High Sierra 10.13, you need to reboot the Mac after installing the kernel driver. On first driver load, MacOS will block the driver. In `System Preferences / Security & Privacy`, the driver can be enabled for loading.
 
