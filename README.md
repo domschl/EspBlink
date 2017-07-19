@@ -16,6 +16,7 @@ Upon successful installation, you should see a new device similar to `/dev/cu.wc
 CP210x USB to UART Bridge VCP Drivers by Silicon Labs:
 https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 
+#### All chipsets
 **Note:** Beginning with MacOS High Sierra 10.13, you need to reboot the Mac after installing the kernel driver. On first driver load, MacOS will block the driver. In `System Preferences / Security & Privacy`, the driver can be enabled for loading.
 
 **Note:** Linux already contains the required driver in the standard kernel. Simply plug in the ESP board.
