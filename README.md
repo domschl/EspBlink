@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/domschl/EspBlink.svg?branch=master)](https://travis-ci.org/domschl/EspBlink)
+
 Minimal **howto** create an application for the ESP8266/ESP12E,ESP12F boards on Mac or Linux using PlatformIO and the Arduino kernel for ESP8266.
 
 ## Preparation
@@ -71,6 +73,11 @@ If upload fails, the most common cause is a failed detection of the USB-serial p
 
 #### Successful build & upload
 This should result in the onboard led of the ESP board blinking.
+
+### Automatic builds using Travis CI
+Have a look at the .travis.yml file. This is all that's needed to allow automatic builds with Travis CI.
+
+Go to https://travis-ci.org/ and to register your github account with travis, and switch on your platform IO project.
 
 # References
 * CH34x MacOS USB-serial driver, [ch340g-ch34g-ch34x-mac-os-x-driver](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver)
