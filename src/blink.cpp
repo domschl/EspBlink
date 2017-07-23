@@ -1,5 +1,5 @@
 /*
- Adapted from: ESP8266 Blink by Simon Peter
+Minimal tests for platformio environment with travis CI support.
 */
 
 #include <ESP8266WiFi.h>
